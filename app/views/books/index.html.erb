@@ -2,6 +2,9 @@
 
 <h1>Listing Books</h1>
 
+<%= link_to "æ¤œç´¢", search_books_path %>
+<%= link_to "ãƒªã‚»ãƒƒãƒˆ", books_path %>
+
 <table>
   <thead>
     <tr>
@@ -26,7 +29,7 @@
         <td><%= book.cd %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'u<%= book.title %>v‚ðíœ‚µ‚Ü‚·‚©?' } %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: "#{book.title}ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ" } %></td>
       </tr>
     <% end %>
   </tbody>
