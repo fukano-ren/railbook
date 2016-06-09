@@ -15,7 +15,7 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
-    @book = book.price = 0
+    @book.price = 0
     @book.cd = true
   end
 
