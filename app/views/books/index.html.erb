@@ -29,7 +29,7 @@
         <td><%= book.cd %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: "#{book.title}を削除しますか？" } %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: "「#{book.title}」を削除しますか？" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,3 +38,4 @@
 <br>
 
 <%= link_to 'New Book', new_book_path %>
+<%= link_to 'View Book', view_helper_test_books_path %>

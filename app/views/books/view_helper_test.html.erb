@@ -1,0 +1,15 @@
+<%= text_field :book,:isbn %></br>
+<br><%= number_field :book, :isbn %></br>
+<br><%= text_area :book, :memo %></br>
+<br><%= check_box :book, :cd, {}, 0, 1 %></br>
+<br><%= radio_button :user,:color, "red" %>赤</br>
+<br><%= radio_button :user,:color, "blue" %>青</br>
+<br><%= radio_button :user,:color, "green" %>緑</br>
+<br><%= select :user, :address, ["出雲市","松江市","雲南市"] %></br>
+<br><select id="book_publish" name="book[publish]"></br>
+ <option value="1">yutaka</option>
+ <option value="2">satsuma</option>
+ <option value="3">fuji</option>
+</select><br>
+<br><%= link_to 'Back' , books_path %></br>
+<br><%= image_tag '20cfce153c6dcbd30dc35695758066ae3.jpg' %></br>
