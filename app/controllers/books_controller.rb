@@ -21,6 +21,13 @@ class BooksController < ApplicationController
   def edit
   end
 
+
+
+def search
+  @books = Book.where(cd: true)
+  render :index
+end
+
   # POST /books
   # POST /books.json
   def create
