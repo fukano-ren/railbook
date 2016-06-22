@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :publishes
+
   resources :books do
     post 'search' , on: :collection
   end

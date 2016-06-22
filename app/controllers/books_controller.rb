@@ -23,10 +23,11 @@ class BooksController < ApplicationController
 
 
 
-def search
-  @books = Book.where(cd: true)
-  render :index
-end
+  def search
+    @value = params["search"]["title"]
+    @books = Book.where(title: params["search"]["title"])
+    render :index
+  end
 
   # POST /books
   # POST /books.json
@@ -35,7 +36,7 @@ end
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.html { redirect_to new_book_path, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
