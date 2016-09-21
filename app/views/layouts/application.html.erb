@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+ 
+  <div align=right>
+    ログインユーザー:<%= session[:name] %>
+    <%= link_to "ログアウト" , controller: :login, action: :index %>
+  </div>
+
 <head>
   <title>Railbook</title>
   <%= image_tag 'railbook.png' %>

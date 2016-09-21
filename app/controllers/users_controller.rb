@@ -75,8 +75,8 @@ class UsersController < ApplicationController
     end
 
     def auth
-      name = 'fukano'
-      passwd = 'tamadou'
+      name = 'fukano-ren'
+      passwd = 'Tamadou0526'
       authenticate_or_request_with_http_basic('Railbook') do |n,p|
         n == name && p == passwd
       end
